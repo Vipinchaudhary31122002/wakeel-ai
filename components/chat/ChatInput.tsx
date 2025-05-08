@@ -6,9 +6,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Send } from "lucide-react";
 import { Mic } from "lucide-react";
 
-interface ChatInputProps {
-  onSendMessage: (message: string) => void;
-}
+// interface ChatInputProps {
+//   onSendMessage: (message: string) => void;
+// }
 
 export default function ChatInput() {
   const [input, setInput] = useState("");

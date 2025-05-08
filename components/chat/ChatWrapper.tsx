@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import clsx from "clsx";
 
 export const ChatWrapper = () => {
-  const { messages, addMessage } = useChatStore();
+  const { messages} = useChatStore();
   const isEmpty = messages.length === 0;
 
   const [showCenteredInput, setShowCenteredInput] = useState(true);
@@ -39,7 +39,9 @@ export const ChatWrapper = () => {
         )}
       >
         <div className="w-full max-w-3xl">
-          <ChatInput onSend={addMessage} />
+          <ChatInput />
+          {/* <ChatInput onSend={addMessage} /> */}
+
         </div>
       </div>
     </div>

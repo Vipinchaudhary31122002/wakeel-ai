@@ -25,7 +25,10 @@ const initialChatHistory = [
   { id: 3, title: "Tailwind CSS Tips", date: "2 weeks ago" },
 ];
 
-const dummyMessages = {
+const dummyMessages: Record<
+  number,
+  { id: number; sender: string; text: string }[]
+> = {
   1: [
     { id: 101, sender: "user", text: "How to set up Next.js?" },
     { id: 102, sender: "bot", text: "You can use create-next-app!" },
@@ -70,7 +73,9 @@ export function AppSidebar() {
             >
               <div className="flex flex-col gap-1">
                 <span className="font-medium">{chat.title}</span>
-                <span className="text-xs text-muted-foreground">{chat.date}</span>
+                <span className="text-xs text-muted-foreground">
+                  {chat.date}
+                </span>
               </div>
 
               <DropdownMenu>
